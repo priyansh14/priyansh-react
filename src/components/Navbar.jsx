@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const Navbar = ({ isAuthenticated, onLogout }) => {
+
+const Navbar = () => {
   const location = useLocation()
 
   return (
@@ -26,17 +27,9 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
                 Contact Us
               </Link>
             </li>
-            {isAuthenticated && (
-              <li>
-                <button 
-                  onClick={onLogout}
-                  className="logout-btn"
-                >
-                  Logout
-                </button>
-              </li>
-            )}
+           
           </ul>
+          <LogoutButton />
         </div>
       </div>
     </nav>

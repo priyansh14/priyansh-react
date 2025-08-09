@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LoginButton from '../components/LoginButton'
 
 const LandingPage = () => {
   return (
@@ -15,9 +16,7 @@ const LandingPage = () => {
             Built with cutting-edge technology and beautiful design.
           </p>
           <div className="hero-buttons">
-            <Link to="/login" className="primary-btn">
-              Get Started
-            </Link>
+           <LoginButton className="login-btn"/>
             <a href="#features" className="secondary-btn">
               Learn More
             </a>
@@ -71,8 +70,8 @@ const LandingPage = () => {
           <div className="cta-content">
             <h2>Ready to Get Started?</h2>
             <p>Join thousands of users who trust SimpleApp for their daily needs.</p>
-            <Link to="/login" className="cta-button">
-              Sign In Now
+            <Link to="/home" className="cta-button">
+              Get Started
             </Link>
           </div>
         </div>
