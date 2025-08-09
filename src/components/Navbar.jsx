@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, onLogout }) => {
   const location = useLocation()
 
   return (
@@ -12,8 +12,8 @@ const Navbar = () => {
           <ul className="nav-links">
             <li>
               <Link 
-                to="/" 
-                className={location.pathname === '/' ? 'active' : ''}
+                to="/home" 
+                className={location.pathname === '/home' ? 'active' : ''}
               >
                 Home
               </Link>
@@ -26,6 +26,16 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </li>
+            {isAuthenticated && (
+              <li>
+                <button 
+                  onClick={onLogout}
+                  className="logout-btn"
+                >
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       </div>
