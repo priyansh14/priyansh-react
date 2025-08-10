@@ -9,7 +9,7 @@ const LandingPage = () => {
       <section className="landing-hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Welcome to <span className="highlight">SimpleApp</span>
+            Welcome to <span className="highlight">Sample React App</span>
           </h1>
           <p className="hero-subtitle">
             Experience the future of modern web applications. 
@@ -25,9 +25,9 @@ const LandingPage = () => {
         
         <div className="hero-visual">
           <div className="floating-card">
-            <div className="card-icon">🚀</div>
-            <h3>Fast & Modern</h3>
-            <p>Built with React 18 & Vite</p>
+            <div className="card-icon">🔒</div>
+            <h3>Secure & Seamless Sign-Ons</h3>
+            <p>By Auth0</p>
           </div>
         </div>
       </section>

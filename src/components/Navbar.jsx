@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
+import LogoutButton from './LogoutButton'
+import Profile from './Profile'
 
 const Navbar = () => {
   const location = useLocation()
@@ -19,7 +20,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
+            <li >
               <Link 
                 to="/contact" 
                 className={location.pathname === '/contact' ? 'active' : ''}
@@ -29,7 +30,8 @@ const Navbar = () => {
             </li>
            
           </ul>
-          <LogoutButton />
+          <Profile className="profile"/>
+          <LogoutButton className="auth0-login-btn"/>
         </div>
       </div>
     </nav>
